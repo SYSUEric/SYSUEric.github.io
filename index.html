@@ -1,26 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link type="text/css" rel="stylesheet" href="css/user.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/prism.js"></script>
+  <script src="js/app.js"></script>
   </head>
   <body>
-      <style>
-      .bizmail_loginpanel{font-size:12px;width:300px;height:auto;border:1px solid #cccccc;background:#ffffff;}
-      .bizmail_LoginBox{padding:10px 15px;}
-      .bizmail_loginpanel h3{padding-bottom:5px;margin:0 0 5px 0;border-bottom:1px solid #cccccc;font-size:14px;}
-      .bizmail_loginpanel form{margin:0;padding:0;}
-      .bizmail_loginpanel input.text{font-size:12px;width:100px;height:20px;margin:0 2px;border:1px solid #C3C3C3;border-color:#7C7C7C #C3C3C3 #C3C3C3 #9A9A9A;}
-      .bizmail_loginpanel .bizmail_column{height:28px;}
-      .bizmail_loginpanel .bizmail_column label{display:block;float:left;width:30px;height:24px;line-height:24px;font-size:12px;}
-      .bizmail_loginpanel .bizmail_column .bizmail_inputArea{float:left;width:240px;}
-      .bizmail_loginpanel .bizmail_column span{font-size:12px;word-wrap:break-word;margin-left: 2px;line-height:200%;}
-      .bizmail_loginpanel .bizmail_SubmitArea{margin-left:30px;clear:both;}
-      .bizmail_loginpanel .bizmail_SubmitArea a{font-size:12px;margin-left:5px;}
-      .bizmail_loginpanel select{width:110px;height:20px;margin:0 2px;}
-      </style>
+
       <script type="text/javascript" src="http://exmail.qq.com/zh_CN/htmledition/js_biz/outerlogin.js"  charset="gb18030"></script>
-      <script type="text/javascript">
-      writeLoginPanel({domainlist:"luppicaia.me", mode:"vertical"});
-      </script>
+      <center>
+      <!-- <div class="row make">
+        <h5 align="left">Luppicaia.</h5>
+      </div> -->
+      <div class="row make">
+      <div id="divLoginpanelVer" class="bizmail_loginpanel">
+        <div class="bizmail_LoginBox">
+          <h3>登录邮箱</h3>
+          <form name="form1" action="https://exmail.qq.com/cgi-bin/login" target="_blank" method="post" onsubmit="return checkInput()" class="col s12" align="center">
+            <input type="hidden" name="firstlogin" value="false">
+            <input type="hidden" name="errtemplate" value="dm_loginpage">
+            <input type="hidden" name="aliastype" value="other">
+            <input type="hidden" name="dmtype" value="bizmail">
+            <input type="hidden" name="p" value="">
+            <div class="row">
+            <div class="input-field col s4"></div>
+              <div class="input-field col s4" align="center">
+                <i class="mdi-action-account-circle prefix"></i>
+                <input id="icon_prefix" type="text" name="uin" class="text validate z-depth-3" value="">
+                <!-- @<span>luppicaia.me</span> -->
+                <label for="icon_prefix">帐号（无需@luppicaia.me）</label>
+                <input type="hidden" name="domain" value="luppicaia.me">
+              </div>
+            </div>
+
+            <div class="row">
+            <div class="input-field col s4"></div>
+              <div class="input-field col s4" align="center">
+                <i class="mdi-action-lock-outline prefix"></i>
+                <input id="icon_prefix" type="password" name="pwd" class="text validate z-depth-3" value="">
+                <!-- @<span>luppicaia.me</span> -->
+                <label for="icon_prefix">密码</label>
+              </div>
+            </div>
+
+            <div class="row">
+            <div class="input-field col s4"></div>
+              <div class="input-field col s4" align="center">
+                <input type="submit" class=" z-depth-3 waves-effect waves-light btn-large" name="" value="登录">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      </div>
   </body>
 </html>
 
