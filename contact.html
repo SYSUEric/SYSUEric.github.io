@@ -182,7 +182,8 @@
     };
 
     //Check for browser support of event handling capability
-    if (window.addEventListener) window.addEventListener("load", createMap, false);
+    if (jQuery) jQuery(document).ready(function ($) { createMap(); });
+    else if (window.addEventListener) window.addEventListener("load", createMap, false);
     else if (window.attachEvent) window.attachEvent("onload", createMap);
     else window.onload = createMap;
   </script>
